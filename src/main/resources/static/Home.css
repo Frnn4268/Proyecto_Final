@@ -3,7 +3,7 @@
 }
 
 body{
-    background: url(../img/Fondo.jpg) no-repeat center center fixed;
+    background: url(Fondo.jpg) no-repeat center center fixed;
     background-size: cover;
 	font-family: "Inter", sans-serif;
 }
