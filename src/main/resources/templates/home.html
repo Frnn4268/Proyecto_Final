@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" th:href="@{Home.css}">
-<title>
-HOME
-</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{Home.css}">
+	<title>
+		HOME
+	</title>
 </head>
+
 <body>
 	<br>
 	<div align="right">
 		<h3>
-			<a th:href="@{'/login'}"
-				class="container p-3 my-3 bg-primary text-white">Cerrar sesión</a>
+			<a th:href="@{'/login'}" class="container p-3 my-3 bg-primary text-white">Cerrar sesión</a>
 		</h3>
 	</div>
 	<div align="center">
@@ -41,23 +38,20 @@ HOME
 	<div align="center">
 		<td>
 			<style>
-.a {
-	color: #fff;
-	background-color: #0E2A6F;
-	border-radius: 40px;
-}
-</style> <br>
+				.a {
+					color: #fff;
+					background-color: #0E2A6F;
+					border-radius: 40px;
+				}
+			</style> <br>
 			<h3>
-				<a th:href="@{'/compras'}"
-					class="container p-3 my-3 bg-primary text-white">Compras</a>
+				<a th:href="@{'/compras'}" class="container p-3 my-3 bg-primary text-white">Compras</a>
 			</h3> <br> <br> <br> <br>
 			<h3>
-				<a th:href="@{'/facturacion'}"
-					class="container p-3 my-3 bg-primary text-white">Ventas</a>
+				<a th:href="@{'/facturacion'}" class="container p-3 my-3 bg-primary text-white">Ventas</a>
 			</h3> <br> <br> <br> <br>
 			<h3>
-				<a th:href="@{'/inventary'}"
-					class="container p-3 my-3 bg-primary text-white">Inventario</a>
+				<a th:href="@{'/inventary'}" class="container p-3 my-3 bg-primary text-white">Inventario</a>
 			</h3>
 		</td>
 	</div>
@@ -65,4 +59,5 @@ HOME
 
 	</tbody>
 </body>
+
 </html>

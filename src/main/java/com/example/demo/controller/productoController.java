@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.Entity.Compra_Producto;
 import com.example.demo.Entity.Producto;
 import com.example.demo.service.productoCompraService;
 import com.example.demo.service.productoService;
 
 @Controller
 public class productoController {
+	
 	@Autowired
     private productoService service;
 	
@@ -53,13 +53,13 @@ public class productoController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveStudent(@ModelAttribute("Producto") Producto std) {
+    public String saveProduct(@ModelAttribute("Producto") Producto std) {
         service.save(std);
         return "redirect:/inventary";
     }
 
     @RequestMapping("/edit/{id}")
-    public ModelAndView showEditStudentPage(@PathVariable(name = "id") int id) {
+    public ModelAndView showProdcutedit(@PathVariable(name = "id") int id) {
         ModelAndView mav = new ModelAndView("new");
         Producto std = service.get(id);
         mav.addObject("Producto", std);
@@ -68,7 +68,7 @@ public class productoController {
     }
     
     @RequestMapping("/delete/{id}")
-    public String deletestudent(@PathVariable(name = "id") int id) {
+    public String deleteProduct(@PathVariable(name = "id") int id) {
         service.delete(id);
         return "redirect:/inventary";
     }
