@@ -6,12 +6,13 @@
 	<title>Create new product</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{new.css}">
 </head>
 
 <body>
 	<div align="center">
-		<br> <br> <br> <br> <br>
-		<h1>Create New Product</h1>
+		<br> <br> <br> <br>
+		<h1>Crear nuevo Producto</h1>
 		<br>
 		<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-plus-square"
 			viewBox="0 0 16 16">
@@ -60,11 +61,16 @@
 				</div>
 				<br> <br>
 
-
 				<center>
+					<style>
+						.btn-primary {
+							color: #fff;
+							background-color: #0E2A6F;
+							border-radius: 40px;
+						}
+					</style>
 					<button class="btn-primary btn-lg">Agregar</button>
 				</center>
-
 
 				</table>
 			</form>
