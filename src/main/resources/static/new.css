@@ -1,0 +1,30 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body{
+    background: url(newImage.jpg) no-repeat center center fixed;
+    background-size: cover;
+	font-family: "Inter", sans-serif;
+}
+
+
+h1 {
+	color: #ffffff;
+	font-size: calc(0em + 4vw);  
+	font-weight: 800;
+}
+
+div {
+	color: #ffffff;
+	font-size: calc(0em + 1vw);  
+	font-weight: 700;
+}
+
+center {
+	color: #ffffff;
+	font-size: calc(0em + 0.9vw);  
+	font-weight: 700;
+	padding: 5px;
+	border-radius: 50px 50px 50px 50px;
+}
