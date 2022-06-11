@@ -2,22 +2,21 @@
 <html>
 
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<link rel="stylesheet" th:href="@{Compras.css}">
 </head>
 
 <body>
-	<link rel="stylesheet"
-		href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
-
-	<form action="#" th:action="@{/save}" th:object="${Compras}"
-		method="post">
+	<form action="#" th:action="@{/save}" th:object="${Compras}" method="post">
 
 		<div align="center">
 
 			<br>
 			<h1>COMPRAS</h1>
-			<h2>DATOS PERSONALES</h2>
+			<h3>DATOS PERSONALES</h3>
+			
 			<br>
 
 			<table>
@@ -75,40 +74,40 @@
 				</div>
 
 				<div align="center">
-				
-				<tr>
-					<td><br> <br>
 
-						<h2>PEDIDO</h2>
-						<div class="col-auto">
-							<label for="CODPROD" class="col-form-label">CODIGO DE
-								PRODUCTO:</label>
-						</div>
-						<div class="col-auto">
-							<input type="text" id="COSPROD" class="form-control"
-								aria-describedby="passwordHelpInline"></td>
+					<tr>
+						<td><br> <br>
 
-					<td>
-						</div> <br> <br> <br> <br>
-						<div class="col-auto">
-							<label for="CANTPROD" class="col-form-label">CANTIDAD DE
-								PRODUCTO:</label>
-						</div>
-						<div class="col-auto">
-							<input type="text" id="CANTPROD" class="form-control"
-								aria-describedby="passwordHelpInline">
-						</div>
-					</td>
+							<h3>PEDIDO</h2>
+								<div class="col-auto">
+									<label for="CODPROD" class="col-form-label">CODIGO DE
+										PRODUCTO:</label>
+								</div>
+								<div class="col-auto">
+									<input type="text" id="COSPROD" class="form-control"
+										aria-describedby="passwordHelpInline">
+						</td>
+
+						<td>
+				</div> <br> <br> <br> 
+				<div class="col-auto">
+					<label for="CANTPROD" class="col-form-label">CANTIDAD DE
+						PRODUCTO:</label>
+				</div>
+				<div class="col-auto">
+					<input type="text" id="CANTPROD" class="form-control" aria-describedby="passwordHelpInline">
+				</div>
+				</td>
 
 				</tr>
-				</div>
+		</div>
 
 
-			</table>
-			<br>
-			<br>
-			
-			<tr>
+		</table>
+		<br>
+		<br>
+
+		<tr>
 
 		</tr>
 		<tr>
@@ -149,6 +148,11 @@
 				</div>
 
 			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h3><a th:href="@{'/home'}" class="container p-3 my-3 bg-primary text-white">Pagina de Inicio</a></h3>
 
 		</tr>
 		<br>
