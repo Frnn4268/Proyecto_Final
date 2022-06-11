@@ -32,6 +32,8 @@ public class productoController {
         return "Compras";
     }
 
+    
+
     @GetMapping("/inventary")
     public String viewHomePage(Model model) {
         List<Producto> liststudent = service.listAll();

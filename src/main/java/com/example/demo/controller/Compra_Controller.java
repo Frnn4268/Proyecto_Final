@@ -24,6 +24,11 @@ public class Compra_Controller {
 	        
         return "home";
     }
+	@GetMapping("/compras")
+    public String viewShop(Model model) {	
+
+        return "Compras";
+    }
 
     @GetMapping("/new")
     public String add(Model model) {
