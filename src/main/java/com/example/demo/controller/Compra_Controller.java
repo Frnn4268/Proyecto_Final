@@ -21,28 +21,16 @@ public class Compra_Controller {
 	@Autowired
     private productoCompraService service;
 
- 
-
-    @RequestMapping(value = "/saveC", method = RequestMethod.POST)
+	
+	@RequestMapping(value = "/saveCompra", method = RequestMethod.POST)
     public String saveStudent(@ModelAttribute("Producto") Compra_Producto std) {
         service.save(std);
         return "redirect:/inventary";
     }
+	
+	
+	
 
-    @RequestMapping("/editC/{id}")
-    public ModelAndView showEditStudentPage(@PathVariable(name = "id") int id) {
-        ModelAndView mav = new ModelAndView("new");
-        Compra_Producto std = service.get(id);
-        mav.addObject("Producto", std);
-        return mav;
-        
-    }	
-    
-    @RequestMapping("/deleteC/{id}")
-    public String deletestudent(@PathVariable(name = "id") int id) {
-        service.delete(id);
-        return "redirect:/inventary";
-    }
     
     
     
