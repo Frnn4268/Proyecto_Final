@@ -1,0 +1,24 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body{
+    background: url(../img/fondoLogin.jpg) no-repeat center center fixed;
+    background-size: cover;
+	font-family: "Inter", sans-serif;
+}
+
+
+h1 {
+	color: #ffffff;
+	font-size: calc(0em + 7vw);  
+	font-weight: 800;
+}
+
+div {
+	color: #ffffff;
+	font-size: calc(0em + 1vw);  
+	font-weight: 700;
+	padding: 5px;
+	border-radius: 8px 0 0 8px;
+}
