@@ -12,13 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.Entity.Compra_Producto;
 import com.example.demo.Entity.Producto;
+import com.example.demo.service.productoCompraService;
 import com.example.demo.service.productoService;
 
 @Controller
 public class productoController {
 	@Autowired
     private productoService service;
+	
+	@Autowired
+    private productoCompraService serviceCompra;
 	
 	@GetMapping("/home")
     public String viewHome(Model model) {	
@@ -28,13 +33,12 @@ public class productoController {
 	
 	@GetMapping("/compras")
     public String viewShop(Model model) {	
-	        
+
         return "Compras";
     }
 
-    
-
     @GetMapping("/inventary")
+    //metodo para mostrar en la tabla todos los datos
     public String viewHomePage(Model model) {
         List<Producto> liststudent = service.listAll();
         model.addAttribute("liststudent", liststudent);
@@ -61,21 +65,11 @@ public class productoController {
         mav.addObject("Producto", std);
         return mav;
         
-    }	
+    }
     
     @RequestMapping("/delete/{id}")
     public String deletestudent(@PathVariable(name = "id") int id) {
         service.delete(id);
         return "redirect:/inventary";
     }
-    
-    
-    @RequestMapping("/pedido/{id}")
-    public ModelAndView mostrarDatos(@PathVariable(name = "cod_product") Long codProducto) {
-        ModelAndView mav = new ModelAndView("Compras");
-        Producto std = service.get(codProducto);
-        mav.addObject("Producto", std);
-        return mav;
-        
-    }	
 }

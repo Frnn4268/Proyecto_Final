@@ -12,7 +12,7 @@ public class Compra_Producto {
     private Long id;
 	private String nombre;
     private String apellido;
-    private String NIT;
+    private String noNit;
     private String ciudad;
 	
     
@@ -21,12 +21,12 @@ public class Compra_Producto {
 	}
 
 
-	public Compra_Producto(Long id, String nombre, String apellido, String nIT, String ciudad) {
+	public Compra_Producto(Long id, String nombre, String apellido, String noNit, String ciudad) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		NIT = nIT;
+		this.noNit = noNit;
 		this.ciudad = ciudad;
 	}
 
@@ -61,13 +61,13 @@ public class Compra_Producto {
 	}
 
 
-	public String getNIT() {
-		return NIT;
+	public String getNoNit() {
+		return noNit;
 	}
 
 
-	public void setNIT(String nIT) {
-		NIT = nIT;
+	public void setNoNit(String noNit) {
+		this.noNit = noNit;
 	}
 
 
@@ -79,7 +79,12 @@ public class Compra_Producto {
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
-    
+	
+	
+
+	
+
+	
     
     
     

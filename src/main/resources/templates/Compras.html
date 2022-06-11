@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+	<meta charset="utf-8" />
+	<title>Create new product</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{new.css}">
+</head>
 	<meta charset="ISO-8859-1">
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
@@ -9,7 +15,7 @@
 </head>
 
 <body>
-	<form action="#" th:action="@{/save}" th:object="${Compras}" method="post">
+	<form action="#" th:action="@{/saveCompras}" th:object="${Producto}" method="post">
 
 		<div align="center">
 
@@ -29,9 +35,8 @@
 								<label for="Nombre" class="col-form-label">Nombre:</label>
 							</div>
 							<div class="col-auto">
-								<input type="text" id="Nombre" class="form-control" 
-								
-									aria-describedby="passwordHelpInline">
+								<input type="text" id="Nombre" class="form-control"
+									aria-describedby="passwordHelpInline" field ="nombre" name ="nombre" >
 							</div>
 						</td>
 						<div>
@@ -40,7 +45,7 @@
 									<label for="Apellido" class="col-form-label">Apellido:</label>
 								</div>
 								<div class="col-auto">
-									<input type="text" id="Apellido" class="form-control" 
+									<input type="text" id="Apellido" class="form-control"
 										aria-describedby="passwordHelpInline">
 								</div>
 							</td>
@@ -52,7 +57,7 @@
 									<label for="NIT" class="col-form-label">NIT:</label>
 								</div>
 								<div class="col-auto">
-									<input type="text" id="NIT" class="form-control" 
+									<input type="text" id="NIT" class="form-control"
 										aria-describedby="passwordHelpInline">
 								</div>
 							</td>
@@ -64,7 +69,7 @@
 									<label for="CIUDAD" class="col-form-label">CIUDAD:</label>
 								</div>
 								<div class="col-auto">
-									<input type="text" id="CIUDAD" class="form-control" 
+									<input type="text" id="CIUDAD" class="form-control"
 										aria-describedby="passwordHelpInline">
 								</div>
 							</td>
@@ -124,77 +129,6 @@
 		</tr>
 		<tr>
 
-			<div class="col-sm-10" align="center">
-				<div class="panel-body" align="center">
-					<table class="table">
-					<thead class="thead-dark">
-							<tr>
-								<th>ID PRODUCTO</th>
-								<th>CODIGO DEL PRODUCTO</th>
-								<th>NOMBRE DEL PRODUCTO</th>
-								<th>CANTIDAD</th>
-								<th>PRECIO</th>
-								<th>TOTAL</th>
-								<th>Edit</th>
-								<th>Delete</th>
-							</tr>
-						</thead>
-						<thead class="thead-dark">
-							<tr>
-								<th>ID PRODUCTO</th>
-								<th>CODIGO DEL PRODUCTO</th>
-								<th>NOMBRE DEL PRODUCTO</th>
-								<th>CANTIDAD</th>
-								<th>PRECIO</th>
-								<th>TOTAL</th>
-								<th>Edit</th>
-								<th>Delete</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr th:each="Compra_Producto : ${liststudent }">
-								<td th:text="${Compra_Producto.id}">ID PRODUCTO</td>
-								<td th:text="${.codProduct}">CODIGO DEL PRODUCTO</td>
-								<td th:text="${.productName}">NOMBRE DEL PRODUCTO</td>
-								<td th:text="${.cantproduct}">CANTIDAD</td>
-								<td th:text="${.precio}">PRECIO</td>
-								<td>
-									<a th:href="@{'/edit/' + ${Compra_Producto.id}}">Edit</a>
-								</td>
-								<td>
-									<a th:href="@{'/delete/' + ${Compra_Producto.id}}">Delete</a>
-								</td>
-							</tr>
-
-						</tbody>
-						<tbody>
-							<tr th:each="Compra_Producto : ${liststudent }">
-								<td th:text="${Compra_Producto.id}">ID PRODUCTO</td>
-								<td th:text="${.codProduct}">CODIGO DEL PRODUCTO</td>
-								<td th:text="${.productName}">NOMBRE DEL PRODUCTO</td>
-								<td th:text="${.cantproduct}">CANTIDAD</td>
-								<td th:text="${.precio}">PRECIO</td>
-								<td>
-									<a th:href="@{'/edit/' + ${Compra_Producto.id}}">Edit</a>
-								</td>
-								<td>
-									<a th:href="@{'/delete/' + ${Compra_Producto.id}}">Delete</a>
-								</td>
-							</tr>
-
-						</tbody>
-					</table>
-
-				</div>
-
-			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<h3><a th:href="@{'/home'}" class="container p-3 my-3 bg-primary text-white">Pagina de Inicio</a></h3>
-
-		</tr>
 		<br>
 	</form>
 </body>
