@@ -32,8 +32,6 @@ public class productoController {
         return "Compras";
     }
 
-    
-
     @GetMapping("/inventary")
     public String viewHomePage(Model model) {
         List<Producto> liststudent = service.listAll();
@@ -61,21 +59,12 @@ public class productoController {
         mav.addObject("Producto", std);
         return mav;
         
-    }	
+    }
     
     @RequestMapping("/delete/{id}")
     public String deletestudent(@PathVariable(name = "id") int id) {
         service.delete(id);
         return "redirect:/inventary";
     }
-    
-    
-    @RequestMapping("/pedido/{id}")
-    public ModelAndView mostrarDatos(@PathVariable(name = "cod_product") Long codProducto) {
-        ModelAndView mav = new ModelAndView("Compras");
-        Producto std = service.get(codProducto);
-        mav.addObject("Producto", std);
-        return mav;
-        
-    }	
+ 	
 }
