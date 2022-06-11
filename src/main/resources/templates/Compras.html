@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+	<meta charset="utf-8" />
+	<title>Create new product</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{new.css}">
+</head>
 	<meta charset="ISO-8859-1">
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
@@ -9,7 +15,7 @@
 </head>
 
 <body>
-	<form action="#" th:action="@{/save}" th:object="${Compras}" method="post">
+	<form action="#" th:action="@{/saveCompras}" th:object="${Producto}" method="post">
 
 		<div align="center">
 
@@ -30,7 +36,7 @@
 							</div>
 							<div class="col-auto">
 								<input type="text" id="Nombre" class="form-control"
-									aria-describedby="passwordHelpInline">
+									aria-describedby="passwordHelpInline" field ="nombre" name ="nombre" >
 							</div>
 						</td>
 						<div>
@@ -103,7 +109,7 @@
 		</div> <br> <br> <br> <br> 
 		<div class="col-auto">
 			<h3>
-				<a th:href="@{'/inventario'}" class="container p-3 my-3 bg-primary text-white">Agregar producto</a>
+				<a th:href="@{'/home'}" class="container p-3 my-3 bg-primary text-white">Agregar producto</a>
 			</h3>
 		</div>
 		</td>
@@ -123,49 +129,6 @@
 		</tr>
 		<tr>
 
-			<div class="col-sm-10" align="center">
-				<div class="panel-body" align="center">
-					<table class="table">
-						<thead class="thead-dark">
-							<tr>
-								<th>ID PRODUCTO</th>
-								<th>CODIGO DEL PRODUCTO</th>
-								<th>NOMBRE DEL PRODUCTO</th>
-								<th>CANTIDAD</th>
-								<th>PRECIO</th>
-								<th>TOTAL</th>
-								<th>Edit</th>
-								<th>Delete</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr th:each="Compras : ${liststudent }">
-								<td th:text="${Compras.id}">ID PRODUCTO</td>
-								<td th:text="${Compras.codProduct}">CODIGO DEL PRODUCTO</td>
-								<td th:text="${Compras.productName}">NOMBRE DEL PRODUCTO</td>
-								<td th:text="${Compras.cantproduct}">CANTIDAD</td>
-								<td th:text="${Compras.precio}">PRECIO</td>
-								<td>
-									<a th:href="@{'/editCompra/' + ${Compras.id}}">Edit</a>
-								</td>
-								<td>
-									<a th:href="@{'/deleteCompra/' + ${Compra.id}}">Delete</a>
-								</td>
-							</tr>
-
-						</tbody>
-					</table>
-
-				</div>
-
-			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<h3><a th:href="@{'/home'}" class="container p-3 my-3 bg-primary text-white">Pagina de Inicio</a></h3>
-
-		</tr>
 		<br>
 	</form>
 </body>
